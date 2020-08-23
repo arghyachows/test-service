@@ -1,4 +1,4 @@
-package com.gintaa.hlrc.TestService.api;
+package com.gintaa.hlrc.api;
 
 import java.io.IOException;
 import java.util.ArrayList;

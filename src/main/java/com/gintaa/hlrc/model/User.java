@@ -1,26 +1,15 @@
 package com.gintaa.hlrc.model;
 
 public class User {
-
-    private String _id;
     private String username;
     private String password;
 
     public User() {
     }
 
-    public User(String _id, String username, String password) {
-        this._id = _id;
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-    }
-
-    public String get_id() {
-        return this._id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
     }
 
     public String getUsername() {
@@ -39,11 +28,6 @@ public class User {
         this.password = password;
     }
 
-    public User _id(String _id) {
-        this._id = _id;
-        return this;
-    }
-
     public User username(String username) {
         this.username = username;
         return this;
@@ -56,8 +40,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "{" + " _id='" + get_id() + "'" + ", username='" + getUsername() + "'" + ", password='" + getPassword()
-                + "'" + "}";
+        return "{" + " username='" + getUsername() + "'" + ", password='" + getPassword() + "'" + "}";
     }
 
 }

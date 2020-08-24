@@ -22,6 +22,7 @@ import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,8 +35,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/rest/users")
 public class UsersResource {
 
-    RestHighLevelClient client = new RestHighLevelClient(
-            RestClient.builder(HttpHost.create("http://192.168.99.116:9200")));
+    @Autowired
+    RestHighLevelClient client;
 
     ObjectMapper mapper = new ObjectMapper();
 
